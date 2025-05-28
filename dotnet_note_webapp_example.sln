@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36119.2 d17.14
+VisualStudioVersion = 17.14.36119.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_note_webapp_example", "dotnet_note_webapp_example.csproj", "{3E2DEDA5-A4BD-963C-E54B-999AF7FDD519}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_note_webapp_example", "WebApp\dotnet_note_webapp_example.csproj", "{3E2DEDA5-A4BD-963C-E54B-999AF7FDD519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webjobs", "Webjobs\Webjobs\Webjobs.csproj", "{0733E7F2-0EA0-4FCB-8F4B-D7DC1AD835B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3E2DEDA5-A4BD-963C-E54B-999AF7FDD519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E2DEDA5-A4BD-963C-E54B-999AF7FDD519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E2DEDA5-A4BD-963C-E54B-999AF7FDD519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0733E7F2-0EA0-4FCB-8F4B-D7DC1AD835B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0733E7F2-0EA0-4FCB-8F4B-D7DC1AD835B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0733E7F2-0EA0-4FCB-8F4B-D7DC1AD835B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0733E7F2-0EA0-4FCB-8F4B-D7DC1AD835B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

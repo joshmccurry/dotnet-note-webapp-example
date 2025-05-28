@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "dotnet_note_webapp_example": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:14750;http://localhost:14751"
+    }
+  }
+}

@@ -365,3 +365,8 @@ FodyWeavers.xsd
 #Local Database
 ./Data/
 /Data/SQlLiteDatabase.db
+/Webjobs/deploy.ps1
+/WebApp/Data/SQlLiteDatabase.db
+/Webjobs/Properties/ServiceDependencies/jm-webjob-demo-dotnet - One Deploy/profile.arm.json
+/WebApp/Properties/ServiceDependencies/jm-webjob-test-dotnet - Zip Deploy/profile.arm.json
+/WebApp/Properties

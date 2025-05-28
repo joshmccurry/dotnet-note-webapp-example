@@ -8,8 +8,6 @@ using Microsoft.Extensions.Azure;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
-//builder.Services.AddDbContext<NotesDbContext>(options =>
-//    options.UseSqlite("Data Source=.\\Data\\SQlLiteDatabase.db"));
 builder.Services.AddControllersWithViews();
 builder.Services.AddLogging();
 builder.Services.AddSingleton<NoteClient>();

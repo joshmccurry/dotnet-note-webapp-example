@@ -9,12 +9,12 @@ namespace dotnet_note_webapp_example.Data {
         public NoteClient(ILogger<NoteClient> logger) {
             _logger = logger;
             // Ensure the database file exists and create the table if it doesn't
-            if (!File.Exists("..\\Data\\SQlLiteDatabase.db")) {
-                Directory.CreateDirectory("..\\Data");
-                File.Create("..\\Data\\SQlLiteDatabase.db").Close();
+            if (!File.Exists("./Data/SQlLiteDatabase.db")) {
+                Directory.CreateDirectory("./Data");
+                File.Create("./Data/SQlLiteDatabase.db").Close();
                 _logger.LogInformation("Database file created.");
             }
-            _connection = new SqliteConnection("Data Source=..\\Data\\SQlLiteDatabase.db");
+            _connection = new SqliteConnection("Data Source=./Data/SQlLiteDatabase.db");
             _connection.Open();
             _logger.LogInformation("Database opened.");
 

@@ -2,17 +2,32 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net481</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <IsWebJobProject>true</IsWebJobProject>
     <WebJobName>$(AssemblyName)</WebJobName>
-    <WebJobType>Continuous</WebJobType>
+    <WebJobType>Triggered</WebJobType>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    <!-- Optional: Enable single file and AOT native compilation -->
+    <!-- <PublishAot>true</PublishAot> -->
+    <!-- <PublishSingleFile>true</PublishSingleFile> -->
+    <!-- <SelfContained>true</SelfContained> -->
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.39" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.41" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage.Queues" Version="5.2.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Host.Storage" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.5" /> <!-- Re-adding this line -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Settings.job">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="purge.sh">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
   </ItemGroup>
 </Project>

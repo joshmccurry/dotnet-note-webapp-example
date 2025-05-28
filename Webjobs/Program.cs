@@ -12,6 +12,7 @@ namespace Webjobs {
             var builder = new HostBuilder()
                 .ConfigureWebJobs(b => {
                     b.AddAzureStorageCoreServices();
+                    b.AddTimers(); // Add support for TimerTrigger functions
                 })
                 .ConfigureLogging((context, b) =>
                 {
@@ -20,7 +21,6 @@ namespace Webjobs {
                     b.AddFilter("Host", LogLevel.Debug);
                     b.AddConsole();
                 });
-            
 
 
             var host = builder.Build();

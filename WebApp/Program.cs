@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using dotnet_note_webapp_example.Data;
+using Microsoft.Extensions.Azure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,11 @@ builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddLogging();
 builder.Services.AddSingleton<NoteClient>();
+builder.Services.AddAzureClients(clientBuilder => {
+    clientBuilder.AddBlobServiceClient(builder.Configuration["StorageConnection:blobServiceUri"]!).WithName("StorageConnection");
+    clientBuilder.AddQueueServiceClient(builder.Configuration["StorageConnection:queueServiceUri"]!).WithName("StorageConnection");
+    clientBuilder.AddTableServiceClient(builder.Configuration["StorageConnection:tableServiceUri"]!).WithName("StorageConnection");
+});
 
 var app = builder.Build();
 

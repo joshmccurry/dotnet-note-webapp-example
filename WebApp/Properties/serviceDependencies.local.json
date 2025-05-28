@@ -8,6 +8,12 @@
       "type": "sqlite.local",
       "connectionId": "ConnectionStrings:DatabaseConnection",
       "dynamicId": null
+    },
+    "storage1": {
+      "secretStore": "LocalSecretsFile",
+      "type": "storage.emulator",
+      "connectionId": "StorageConnection",
+      "dynamicId": null
     }
   }
 }

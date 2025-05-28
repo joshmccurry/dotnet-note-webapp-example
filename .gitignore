@@ -363,4 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #Local Database
-Data/
+./Data/
+/Data/SQlLiteDatabase.db

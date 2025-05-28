@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36119.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_note_webapp_example", "WebApp\dotnet_note_webapp_example.csproj", "{3E2DEDA5-A4BD-963C-E54B-999AF7FDD519}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webjobs", "Webjobs\Webjobs\Webjobs.csproj", "{0733E7F2-0EA0-4FCB-8F4B-D7DC1AD835B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_note_webjob_example", "Webjobs\dotnet_note_webjob_example.csproj", "{0733E7F2-0EA0-4FCB-8F4B-D7DC1AD835B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

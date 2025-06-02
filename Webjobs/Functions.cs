@@ -1,5 +1,8 @@
 ﻿using dotnet_note_webjob_example;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
@@ -15,7 +18,7 @@ namespace Webjobs {
 
         [Singleton]
         public async Task Purge([TimerTrigger("0 * * * * *")] TimerInfo myTimer) {
-            Purge().GetAwaiter().GetResult();
+            await Purge();
         }
 
         public async Task Purge() {

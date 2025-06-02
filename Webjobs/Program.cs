@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Webjobs {
     // To learn more about Microsoft Azure WebJobs SDK, please see https://go.microsoft.com/fwlink/?linkid=2250384
     internal class Program {
-        public static async Task Main(string[] args) {
+        public static async Task WorkingMethod(string[] args) {
             // Set up DI
             var services = new ServiceCollection();
             services.AddLogging(config => {
@@ -36,13 +36,12 @@ namespace Webjobs {
             }
         }
 
-        public static async Task WebjobSetup(string[] args) {
+        public static async Task Main(string[] args) {
 
             var builder = new HostBuilder()
                 .ConfigureWebJobs(b => {
                     b.AddAzureStorageCoreServices();
                     b.AddTimers(); // Add support for TimerTrigger functions
-                //Currently Broken for Linux
                 })
                 .ConfigureLogging((context, b) => {
                     b.SetMinimumLevel(LogLevel.Error);

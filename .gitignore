@@ -370,3 +370,4 @@ FodyWeavers.xsd
 /Webjobs/Properties/ServiceDependencies/jm-webjob-demo-dotnet - One Deploy/profile.arm.json
 /WebApp/Properties/ServiceDependencies/jm-webjob-test-dotnet - Zip Deploy/profile.arm.json
 /WebApp/Properties
+/deploy.ps1

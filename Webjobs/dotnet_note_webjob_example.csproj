@@ -22,4 +22,10 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.5" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.5" /> <!-- Re-adding this line -->
   </ItemGroup>
+
+  <ItemGroup>
+	<None Update="run.sh">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+  </ItemGroup>
 </Project>
